@@ -17,7 +17,7 @@ Procedimento: ${servico}
 Data: ${data}
 Horário: ${horario}`;
 
-let numero = "5583999999999";
+let numero = "5583991740417";
 
 window.open(
 `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`
