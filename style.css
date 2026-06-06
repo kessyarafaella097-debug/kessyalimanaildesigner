@@ -1,155 +1,457 @@
-:root{
-    --offwhite:#F8F5F0;
-    --nude:#D8B89E;
-    --gold:#C8A96B;
-    --text:#4B3F35;
+/* Variáveis de Cores */
+:root {
+    --off-white: #f5f1ed;
+    --ouro: #d4af37;
+    --ouro-escuro: #b8941a;
+    --preto: #1a1a1a;
+    --cinza-claro: #e8e0d8;
+    --cinza-medio: #c0b8ae;
+    --sombra: rgba(0, 0, 0, 0.1);
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:var(--offwhite);
-    color:var(--text);
-    font-family:'Montserrat',sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 8%;
-    background:white;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--preto);
+    background-color: var(--off-white);
+    line-height: 1.6;
 }
 
-.logo h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2.2rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo p{
-    color:var(--gold);
-    letter-spacing:3px;
+/* Header */
+.header {
+    background-color: var(--off-white);
+    border-bottom: 2px solid var(--ouro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px var(--sombra);
 }
 
-nav{
-    display:flex;
-    gap:25px;
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-nav a{
-    text-decoration:none;
-    color:var(--text);
+.logo h1 {
+    font-size: 28px;
+    color: var(--preto);
+    font-weight: 700;
 }
 
-.hero{
-    height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(
-    rgba(248,245,240,.8),
-    rgba(248,245,240,.8)
-    );
+.logo .subtitle {
+    font-size: 12px;
+    color: var(--ouro);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.hero h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4rem;
+.nav {
+    display: flex;
+    gap: 30px;
 }
 
-.hero p{
-    margin:20px 0;
+.nav-link {
+    text-decoration: none;
+    color: var(--preto);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
 }
 
-.btn{
-    text-decoration:none;
-    background:var(--gold);
-    color:white;
-    padding:15px 35px;
-    border-radius:50px;
+.nav-link:hover {
+    color: var(--ouro);
+    border-bottom-color: var(--ouro);
 }
 
-section{
-    padding:80px 10%;
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--cinza-claro) 100%);
+    padding: 100px 20px;
+    text-align: center;
 }
 
-section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-family:'Cormorant Garamond',serif;
-    font-size:2.5rem;
+.hero-content h2 {
+    font-size: 48px;
+    color: var(--preto);
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.sobre{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
+.hero-content p {
+    font-size: 18px;
+    color: var(--preto);
+    margin-bottom: 30px;
+    opacity: 0.9;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
 }
 
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    border:1px solid #eee;
-    transition:.3s;
+.btn-primary {
+    background-color: var(--ouro);
+    color: var(--preto);
+    border: 2px solid var(--ouro);
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.btn-primary:hover {
+    background-color: var(--ouro-escuro);
+    border-color: var(--ouro-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
-.card h3{
-    margin-bottom:15px;
+.btn-full {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
 }
 
-.card span{
-    color:var(--gold);
-    font-size:1.4rem;
-    font-weight:600;
+/* Seções */
+section {
+    padding: 80px 20px;
 }
 
-.agendamento form{
-    max-width:600px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.section-title {
+    font-size: 36px;
+    color: var(--preto);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: 700;
 }
 
-input,
-select{
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:10px;
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--ouro);
+    margin: 15px auto 0;
 }
 
-button{
-    padding:15px;
-    border:none;
-    background:var(--gold);
-    color:white;
-    border-radius:10px;
-    cursor:pointer;
+/* Serviços */
+.servicos {
+    background-color: var(--off-white);
 }
 
-.contato{
-    text-align:center;
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:white;
+.servico-card {
+    background-color: white;
+    border-left: 4px solid var(--ouro);
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px var(--sombra);
+    text-align: center;
 }
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.servico-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.servico-card h3 {
+    font-size: 20px;
+    color: var(--preto);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.servico-card p {
+    font-size: 14px;
+    color: var(--cinza-medio);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.servico-card .preco {
+    color: var(--ouro);
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Agendamento */
+.agendamento {
+    background: linear-gradient(135deg, var(--cinza-claro) 0%, var(--off-white) 100%);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px var(--sombra);
+    border-top: 4px solid var(--ouro);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--preto);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--ouro);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Contato */
+.contato {
+    background-color: var(--off-white);
+}
+
+.contato-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.info-icon {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.info-item h3 {
+    color: var(--preto);
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.info-item p {
+    color: var(--cinza-medio);
+    font-size: 14px;
+}
+
+.info-item a {
+    color: var(--ouro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--ouro-escuro);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--preto);
+    color: var(--off-white);
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid var(--ouro);
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+
+    .contato-info {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .nav {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .servico-card {
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .info-item {
+        gap: 15px;
+    }
+
+    .info-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servico-card,
+.info-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.servico-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.servico-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.servico-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.servico-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
