@@ -1,132 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kessya Lima | Nail Designer</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kessya Lima - Nail Design</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">
-        <h1>Kessya Lima</h1>
-        <p>Nail Designer</p>
-    </div>
-
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#agendamento">Agendamento</a>
-        <a href="#contato">Contato</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="hero-content">
-        <h2>Elegância em cada detalhe</h2>
-        <p>Alongamentos e cuidados para realçar sua beleza.</p>
-
-        <a href="#agendamento" class="btn">
-            Agendar Horário
-        </a>
-    </div>
-</section>
-
-<section id="sobre" class="sobre">
-    <h2>Sobre Mim</h2>
-
-    <p>
-        Sou Kessya Lima, Nail Designer especializada em alongamentos,
-        banho em gel e esmaltação. Meu objetivo é oferecer um atendimento
-        acolhedor e resultados impecáveis para cada cliente.
-    </p>
-</section>
-
-<section id="servicos" class="servicos">
-
-    <h2>Procedimentos</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Alongamento no moldeF1</h3>
-            <span>R$ 55,00</span>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Kessya Lima</h1>
+                <p class="subtitle">Nail Design</p>
+            </div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#agendamento" class="nav-link">Agendamento</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="card">
-            <h3>Manutenção</h3>
-            <span>R$ 50,00</span>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Beleza que Realça sua Personalidade</h2>
+                <p>Unhas perfeitas para cada ocasião. Design e qualidade em primeiro lugar.</p>
+                <a href="#agendamento" class="btn btn-primary">Agendar Agora</a>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Banho em Gel</h3>
-            <span>R$ 50,00</span>
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">💅</div>
+                    <h3>Manicure</h3>
+                    <p>Hidratação, limpeza e acabamento perfeito nas unhas naturais.</p>
+                    <p class="preco">A partir de R$ 50,00</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">✨</div>
+                    <h3>Nail Art</h3>
+                    <p>Designs personalizados e criações exclusivas para suas unhas.</p>
+                    <p class="preco">A partir de R$ 80,00</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💎</div>
+                    <h3>Unhas de Gel</h3>
+                    <p>Acabamento brilhoso e durabilidade de até 4 semanas.</p>
+                    <p class="preco">A partir de R$ 90,00</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🌸</div>
+                    <h3>Design Exclusivo</h3>
+                    <p>Crie seu próprio design com nossas consultoras experientes.</p>
+                    <p class="preco">Consulte</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Esmaltação em Gel</h3>
-            <span>R$ 45,00</span>
+    <!-- Agendamento -->
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <h2 class="section-title">Agende seu Atendimento</h2>
+            <div class="form-container">
+                <form id="form-agendamento" class="form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone (WhatsApp)</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data">Data</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Horário</label>
+                            <select id="hora" name="hora" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="servico">Serviço</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Manicure">Manicure - R$ 50,00</option>
+                            <option value="Nail Art">Nail Art - R$ 80,00</option>
+                            <option value="Unhas de Gel">Unhas de Gel - R$ 90,00</option>
+                            <option value="Design Exclusivo">Design Exclusivo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (Opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos mais sobre seu design ideal..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Confirmar Agendamento</button>
+                </form>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Remoção</h3>
-            <span>R$ 25,00</span>
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-info">
+                <div class="info-item">
+                    <span class="info-icon">📱</span>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h3>Localização</h3>
+                        <p>São Paulo - SP</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <div>
+                        <h3>Horário de Funcionamento</h3>
+                        <p>Seg-Sex: 09:00 - 18:00<br>Sáb: 10:00 - 16:00</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kessya Lima - Nail Design. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-</section>
-
-<section id="agendamento" class="agendamento">
-
-    <h2>Agendamento Online</h2>
-
-    <form>
-
-        <input type="text" id="nome" placeholder="Seu nome">
-
-        <input type="tel" id="telefone" placeholder="Telefone">
-
-        <select id="servico">
-            <option>Alongamento no moldeF1</option>
-            <option>Banho em Gel</option>
-            <option>Esmaltação em Gel</option>
-            <option>Manutenção</option>
-            <option>Remoção</option>
-        </select>
-
-        <input type="date" id="data">
-
-        <input type="time" id="horario">
-
-        <button type="button" onclick="agendar()">
-            Agendar pelo WhatsApp
-        </button>
-
-    </form>
-
-</section>
-
-<section id="contato" class="contato">
-
-    <h2>Contato</h2>
-
-    <p>Instagram: @kessyalima.nails</p>
-
-    <p>WhatsApp: (83) 99174-0417</p>
-
-</section>
-
-<footer>
-    © Kessya Lima - Nail Designer
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
